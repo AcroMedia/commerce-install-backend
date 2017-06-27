@@ -10,5 +10,10 @@
     "require": {
         "smmccabe/accompanist": "*"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Kickstart\\": "src/"
+        }
+    }
 }
