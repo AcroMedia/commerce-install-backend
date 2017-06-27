@@ -3,3 +3,4 @@ composer.lock
 .gitignore
 .gitlab-ci.yml
 .gitlabci-rsync-exclude.txt
+web/generated
