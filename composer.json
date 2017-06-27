@@ -1,0 +1,14 @@
+{
+    "name": "smmccabe/kickstart-prototype",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Shawn McCabe",
+            "email": "smccabe@acromediainc.com"
+        }
+    ],
+    "require": {
+        "smmccabe/accompanist": "*"
+    },
+    "minimum-stability": "dev"
+}
