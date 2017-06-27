@@ -9,13 +9,13 @@ $composerJSON = new Base();
 
 // Custom packages
 if (isset($_GET['packages'])) {
-  $packages = $_GET['packages'];
+    $packages = $_GET['packages'];
 
-  if(is_array($packages)) {
-    foreach ($packages as $package) {
-      $composerJSON->addRequire($package);
+    if (is_array($packages)) {
+        foreach ($packages as $package) {
+            $composerJSON->addRequire($package);
+        }
     }
-  }
 }
 
 // Package Generation, move into function/class at some point
