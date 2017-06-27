@@ -8,7 +8,7 @@ stages:
 code_standards:
   stage: test
   script:
-    - phpcs index.php
+    - phpcs --standard=PSR2 web/ src/
 
 build:
   stage: build
