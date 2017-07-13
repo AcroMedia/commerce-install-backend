@@ -47,4 +47,4 @@ try {
 }
 
 // The compress option above automatically generates the .gz version
-print 'https://' . $_SERVER['HTTP_HOST'] . $filename . '.gz';
+print 'https://' . $_SERVER['HTTP_HOST'] . '/' . $filename . '.gz';
