@@ -5,6 +5,8 @@ require __DIR__ . '/../vendor/autoload.php';
 use Kickstart\Id;
 use Kickstart\Base;
 
+header("Access-Control-Allow-Origin: *");
+
 $composerJSON = new Base();
 
 // Custom packages
