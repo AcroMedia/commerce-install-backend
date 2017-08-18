@@ -24,7 +24,7 @@ deploy-production:
     - master
   environment:
     name: production
-    url: https://install-service.drupalcommerce.com
+    url: https://install-service.acromedia.com
   script:
     # Install ssh-agent if not already installed, it is required by Docker.
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
