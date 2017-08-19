@@ -32,6 +32,7 @@ try {
     $tar = new PharData($filename);
 
     $tar->addFromString('composer.json', $composerJSON->generateJSON());
+    $tar->addFile('../templates/README.md', 'README.md');
     $tar->addEmptyDir('scripts');
     $tar->addEmptyDir('scripts/composer');
     $tar->addFile(
@@ -46,5 +47,7 @@ try {
     echo "Exception : " . $e;
 }
 
+// Dev env will be using http
+$protocol = strpos($_SERVER['HTTP_HOST'], 'localhost') === FALSE ? 'https://' : 'http://';
 // The compress option above automatically generates the .gz version
-print 'https://' . $_SERVER['HTTP_HOST'] . '/' . $filename . '.gz';
+print $protocol . $_SERVER['HTTP_HOST'] . '/' . $filename . '.gz';
