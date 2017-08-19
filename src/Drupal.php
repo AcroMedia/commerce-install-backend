@@ -23,15 +23,6 @@ class Drupal extends Base {
     $this->addRequire('drupal/swiftmailer');
     $this->addRequire('drupalcommerce/commerce_base');
 
-    $this->addAutoload('classmap', ['scripts/composer/ScriptHandler.php']);
 
-    $this->addScript(
-      'drupal-scaffold',
-      'DrupalComposer\\DrupalScaffold\\Plugin::scaffold'
-    );
-    $this->addScript(
-      'post-update-cmd',
-      ['DrupalProject\\composer\\ScriptHandler::createRequiredFiles']
-    );
   }
 }
