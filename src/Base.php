@@ -17,7 +17,6 @@ class Base extends Accompanist {
     );
     $this->addRequire('drupal/commerce');
 
-
     $this->addAutoload('classmap', ['scripts/composer/ScriptHandler.php']);
 
     $this->addScript(
@@ -26,7 +25,7 @@ class Base extends Accompanist {
     );
     $this->addScript(
       'post-update-cmd',
-      ['DrupalProject\\composer\\ScriptHandler::createRequiredFiles']
+      'DrupalProject\\composer\\ScriptHandler::createRequiredFiles'
     );
   }
 }
