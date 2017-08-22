@@ -7,8 +7,20 @@ class Lightning extends Base {
   public function __construct() {
     parent::__construct('Kickstart', 'Automatically Generated Commerce Kickstart Composer File');
 
+    /* todo need these?
+    // Description
+    $this->setDescription('Project template for Drupal 8 sites built with the Lightning distribution.');
+
     // Type
     $this->setType('project');
+    */
+
+    // License
+    $this->setLicense('GPL-2.0+');
+
+    // Stability
+    $this->setMinimumStability('dev');
+    $this->setPreferStable(true);
 
     // Require Dev
     $this->addRequireDev('drupal/drupal-extension', '~3.2.0');

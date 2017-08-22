@@ -8,9 +8,9 @@
         }
     ],
     "require": {
-        "smmccabe/accompanist": "*"
+        "smmccabe/accompanist": ">=1.0.0-alpha2"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "alpha",
     "autoload": {
         "psr-4": {
             "Kickstart\\": "src/"

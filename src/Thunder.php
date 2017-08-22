@@ -14,7 +14,20 @@ class Thunder extends Base {
     $this->addRequireDev('burdamagazinorg/thunder-dev-tools', 'dev-master');
     $this->addRequireDev('behat/mink-selenium2-driver', 'dev-master');
 
-    //todo: add replace functionality to accompanist: https://getcomposer.org/doc/04-schema.md#replace
+    // Replace
+    $this->setReplace(
+      [
+        "heiseonline/shariff" => "*",
+        "bower-asset/jquery" => "*",
+        "bower-asset/jqueryui" => "*",
+        "bower-asset/backbone" => "*",
+        "bower-asset/underscore" => "*",
+        "npm-asset/jquery" => "*",
+        "npm-asset/jqueryui" => "*",
+        "npm-asset/backbone" => "*",
+        "npm-asset/underscore" => "*",
+      ]
+    );
 
     // Require
     $this->addRequire('drupal-composer/drupal-scaffold', '^2.0.0');
@@ -83,54 +96,56 @@ class Thunder extends Base {
     $this->addRequire('bower-asset/shariff', '^1.24');
 
     // Extras
-    $this->setExtra([
-      'installer-paths' => [
-        'docroot/core' => [
-          'type:drupal-core',
+    $this->setExtra(
+      [
+        'installer-paths' => [
+          'docroot/core' => [
+            'type:drupal-core',
+          ],
+          'docroot/modules/contrib/[$name]' => [
+            'type:drupal-module',
+          ],
+          'docroot/profiles/contrib/[$name]' => [
+            'type:drupal-profile',
+          ],
+          'docroot/themes/contrib/[$name]' => [
+            'type:drupal-theme',
+          ],
+          'drush/contrib/[$name]' => [
+            'type:drupal-drush',
+          ],
         ],
-        'docroot/modules/contrib/[$name]' => [
-          'type:drupal-module',
+        'patches' => [
+          "drupal/media_entity" => [
+            "Make the label form element non-required in the entity form" => "https://www.drupal.org/files/issues/2813685-21.patch",
+          ],
+          "drupal/diff" => [
+            "Back button for comparison page" => "https://www.drupal.org/files/issues/back_button_for-2853193-4.patch",
+          ],
+          "drupal/paragraphs" => [
+            "create a NEW paragraph 'in place' between existing ones" => "https://www.drupal.org/files/issues/2899034_7.patch",
+          ],
+          "drupal/amp" => [
+            "Missing schema" => "https://www.drupal.org/files/issues/missing_schema_for-2878769-3.patch",
+          ],
+          "drupal/amptheme" => [
+            "Don't use network for loading logo information" => "https://www.drupal.org/files/issues/amptheme-do_not_use_the_network_for_loading_logo_information-2753089-7.patch",
+          ],
+          "drupal/entity_browser" => [
+            "Provide inline entity form FieldWidgetDisplay" => "https://www.drupal.org/files/issues/2858438_6.patch",
+          ],
+          "drupal/dropzonejs" => [
+            "Theming compatible JS selectors for auto select" => "https://www.drupal.org/files/issues/2870708_2.patch",
+          ],
+          "drupal/field_group" => [
+            "Form mode ignored as field groups always attached to 'default' form mode" => "https://www.drupal.org/files/issues/field_group-form-mode-ignored-2842354-2.patch",
+          ],
+          "drupal/media_entity_pinterest" => [
+            "Media name always 'h'" => "https://www.drupal.org/files/issues/media_name_always_h-2837977-8.patch",
+          ],
         ],
-        'docroot/profiles/contrib/[$name]' => [
-          'type:drupal-profile',
-        ],
-        'docroot/themes/contrib/[$name]' => [
-          'type:drupal-theme',
-        ],
-        'drush/contrib/[$name]' => [
-          'type:drupal-drush',
-        ],
-      ],
-      'patches' => [
-        "drupal/media_entity" => [
-          "Make the label form element non-required in the entity form" => "https://www.drupal.org/files/issues/2813685-21.patch",
-        ],
-        "drupal/diff" => [
-          "Back button for comparison page" => "https://www.drupal.org/files/issues/back_button_for-2853193-4.patch",
-        ],
-        "drupal/paragraphs" => [
-          "create a NEW paragraph 'in place' between existing ones" => "https://www.drupal.org/files/issues/2899034_7.patch",
-        ],
-        "drupal/amp" => [
-          "Missing schema" => "https://www.drupal.org/files/issues/missing_schema_for-2878769-3.patch",
-        ],
-        "drupal/amptheme" => [
-          "Don't use network for loading logo information" => "https://www.drupal.org/files/issues/amptheme-do_not_use_the_network_for_loading_logo_information-2753089-7.patch",
-        ],
-        "drupal/entity_browser" => [
-          "Provide inline entity form FieldWidgetDisplay" => "https://www.drupal.org/files/issues/2858438_6.patch",
-        ],
-        "drupal/dropzonejs" => [
-          "Theming compatible JS selectors for auto select" => "https://www.drupal.org/files/issues/2870708_2.patch",
-        ],
-        "drupal/field_group" => [
-          "Form mode ignored as field groups always attached to 'default' form mode" => "https://www.drupal.org/files/issues/field_group-form-mode-ignored-2842354-2.patch",
-        ],
-        "drupal/media_entity_pinterest" => [
-          "Media name always 'h'" => "https://www.drupal.org/files/issues/media_name_always_h-2837977-8.patch",
-        ],
-      ],
-    ]);
+      ]
+    );
 
   }
 }

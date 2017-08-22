@@ -15,7 +15,15 @@ class Base extends Accompanist {
       'vcs',
       'https://github.com/drupalcommerce/commerce_base'
     );
+
+    $this->addRequire('ext-curl');
+    $this->addRequire('composer/installers', '^1.2');
+    $this->addRequire('drupal-composer/drupal-scaffold', '^2.2');
+    $this->addRequire('cweagans/composer-patches', '~1.0');
+    $this->addRequire('drupal/core');
     $this->addRequire('drupal/commerce');
+    $this->addRequire('drupal/swiftmailer');
+    $this->addRequire('drupalcommerce/commerce_base');
 
     $this->addAutoload('classmap', ['scripts/composer/ScriptHandler.php']);
 
