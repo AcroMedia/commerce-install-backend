@@ -1,0 +1,39 @@
+version: "2"
+
+services:
+  php:
+    image: wodby/drupal-php:7.1-2.0.0
+    environment:
+      PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
+      PHP_XDEBUG: 1
+      PHP_XDEBUG_DEFAULT_ENABLE: 1
+      PHP_XDEBUG_REMOTE_AUTOSTART: 1
+    volumes:
+      - ./web:/var/www/html
+      - ./vendor:/var/www/vendor
+      - ./src:/var/www/src
+      - ./templates:/var/www/templates
+
+  nginx:
+    image: wodby/drupal-nginx:8-1.10-2.0.0
+    environment:
+      NGINX_BACKEND_HOST: php
+      NGINX_SERVER_ROOT: /var/www/html/
+    volumes:
+      - ./web:/var/www/html
+    labels:
+      - 'traefik.backend=nginx'
+      - 'traefik.port=80'
+      #  add this url to your hosts file
+      - 'traefik.frontend.rule=Host:kickstart-backend.localhost'
+
+
+  traefik:
+    image: traefik
+    restart: unless-stopped
+    command: -c /dev/null --web --docker --logLevel=INFO
+    ports:
+      - '80:80'
+      - '8888:8080'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
