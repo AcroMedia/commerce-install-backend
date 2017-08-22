@@ -5,10 +5,7 @@ namespace Kickstart;
 class Thunder extends Base {
 
   public function __construct() {
-    parent::__construct('Kickstart', 'Automatically Generated Commerce Kickstart Composer File');
-
-    // Type
-    $this->setType('project');
+    parent::__construct();
 
     // Require Dev
     $this->addRequireDev('burdamagazinorg/thunder-dev-tools', 'dev-master');
@@ -97,24 +94,7 @@ class Thunder extends Base {
 
     // Extras
     $this->setExtra(
-      [
-        'installer-paths' => [
-          'docroot/core' => [
-            'type:drupal-core',
-          ],
-          'docroot/modules/contrib/[$name]' => [
-            'type:drupal-module',
-          ],
-          'docroot/profiles/contrib/[$name]' => [
-            'type:drupal-profile',
-          ],
-          'docroot/themes/contrib/[$name]' => [
-            'type:drupal-theme',
-          ],
-          'drush/contrib/[$name]' => [
-            'type:drupal-drush',
-          ],
-        ],
+      (object) [
         'patches' => [
           "drupal/media_entity" => [
             "Make the label form element non-required in the entity form" => "https://www.drupal.org/files/issues/2813685-21.patch",

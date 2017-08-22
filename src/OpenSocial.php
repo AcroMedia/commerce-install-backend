@@ -5,22 +5,7 @@ namespace Kickstart;
 class OpenSocial extends Base {
 
   public function __construct() {
-    parent::__construct('Kickstart', 'Automatically Generated Commerce Kickstart Composer File');
-
-    /* todo need these?
-    // Description
-    $this->setDescription('Open Social is a distribution for building social communities and intranets.');
-
-    // Type
-    $this->setType('drupal-profile');
-    */
-
-    // License
-    $this->setLicense('GPL-2.0+');
-
-    // Stability
-    $this->setMinimumStability('dev');
-    $this->setPreferStable(TRUE);
+    parent::__construct();
 
     // Require
     $this->addRequire('cweagans/composer-patches', '^1.5.0');
@@ -76,7 +61,7 @@ class OpenSocial extends Base {
 
     // Extras
     $this->setExtra(
-      [
+      (object) [
         'patches' => [
           'drupal/core' => [
             'Clean up user input for exposed checkboxes' => 'https://www.drupal.org/files/issues/2687773-18-Cleanup-user-input-for-checkboxes-8.2.patch',

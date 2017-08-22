@@ -5,22 +5,7 @@ namespace Kickstart;
 class Lightning extends Base {
 
   public function __construct() {
-    parent::__construct('Kickstart', 'Automatically Generated Commerce Kickstart Composer File');
-
-    /* todo need these?
-    // Description
-    $this->setDescription('Project template for Drupal 8 sites built with the Lightning distribution.');
-
-    // Type
-    $this->setType('project');
-    */
-
-    // License
-    $this->setLicense('GPL-2.0+');
-
-    // Stability
-    $this->setMinimumStability('dev');
-    $this->setPreferStable(true);
+    parent::__construct();
 
     // Require Dev
     $this->addRequireDev('drupal/drupal-extension', '~3.2.0');
@@ -59,31 +44,11 @@ class Lightning extends Base {
     $this->setConfig(['bin-dir' => 'bin/']);
 
     // Extras
-    $this->setExtra([
-      'installer-types' => ['bower-asset', 'npm-asset'],
-      'installer-paths' => [
-        'docroot/core' => [
-          'type:drupal-core',
-        ],
-        'docroot/libraries/{$name}' => [
-          'type:drupal-library',
-          'type:bower-asset',
-          'type:npm-asset',
-        ],
-        'docroot/modules/contrib/{$name}' => [
-          'type:drupal-module',
-        ],
-        'docroot/profiles/contrib/{$name}' => [
-          'type:drupal-profile',
-        ],
-        'docroot/themes/contrib/{$name}' => [
-          'type:drupal-theme',
-        ],
-        'drush/contrib/{$name}' => [
-          'type:drupal-drush',
-        ],
-      ],
-      'enable-patching' => TRUE,
-    ]);
+    $this->setExtra(
+      (object) [
+        'installer-types' => ['bower-asset', 'npm-asset'],
+        'enable-patching' => TRUE,
+      ]
+    );
   }
 }
