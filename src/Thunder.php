@@ -88,16 +88,16 @@ class Thunder extends Base {
         'docroot/core' => [
           'type:drupal-core',
         ],
-        'docroot/modules/contrib/[$name]' => [
+        'docroot/modules/contrib/{$name}' => [
           'type:drupal-module',
         ],
-        'docroot/profiles/contrib/[$name]' => [
+        'docroot/profiles/contrib/{$name}' => [
           'type:drupal-profile',
         ],
-        'docroot/themes/contrib/[$name]' => [
+        'docroot/themes/contrib/{$name}' => [
           'type:drupal-theme',
         ],
-        'drush/contrib/[$name]' => [
+        'drush/contrib/{$name}' => [
           'type:drupal-drush',
         ],
       ],
