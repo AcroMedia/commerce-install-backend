@@ -51,7 +51,7 @@ class Lightning extends Base {
       'installer-types' => ['bower-asset', 'npm-asset'],
       'installer-paths' => [
         'docroot/core' => [
-          'type=>drupal-core',
+          'type:drupal-core',
         ],
         'docroot/libraries/{$name}' => [
           'type:drupal-library',
