@@ -50,21 +50,21 @@ class Lightning extends Base {
     $this->setExtra([
       'installer-types' => ['bower-asset', 'npm-asset'],
       'installer-paths' => [
-        'docroot/core' => [
+        'web/core' => [
           'type:drupal-core',
         ],
-        'docroot/libraries/{$name}' => [
+        'web/libraries/{$name}' => [
           'type:drupal-library',
           'type:bower-asset',
           'type:npm-asset',
         ],
-        'docroot/modules/contrib/{$name}' => [
+        'web/modules/contrib/{$name}' => [
           'type:drupal-module',
         ],
-        'docroot/profiles/contrib/{$name}' => [
+        'web/profiles/contrib/{$name}' => [
           'type:drupal-profile',
         ],
-        'docroot/themes/contrib/{$name}' => [
+        'web/themes/contrib/{$name}' => [
           'type:drupal-theme',
         ],
         'drush/contrib/{$name}' => [
