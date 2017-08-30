@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d203ecc21547e5f728d23c6e7f75262c",
+    "content-hash": "8493fa54fcd70a8f706d2c7902e5c3f7",
     "packages": [
         {
             "name": "smmccabe/accompanist",
-            "version": "dev-master",
+            "version": "1.0.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smmccabe/accompanist.git",
-                "reference": "5096a9b0dc4fc3fdca6f3ff21b4d10201e96add5"
+                "reference": "41cd799897fee8ef89e2e2c7d453cb1c13a7d1ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smmccabe/accompanist/zipball/5096a9b0dc4fc3fdca6f3ff21b4d10201e96add5",
-                "reference": "5096a9b0dc4fc3fdca6f3ff21b4d10201e96add5",
+                "url": "https://api.github.com/repos/smmccabe/accompanist/zipball/41cd799897fee8ef89e2e2c7d453cb1c13a7d1ea",
+                "reference": "41cd799897fee8ef89e2e2c7d453cb1c13a7d1ea",
                 "shasum": ""
             },
             "require": {
@@ -40,13 +40,15 @@
                 }
             ],
             "description": "A PHP API for generating dynamic composer.json files",
-            "time": "2017-06-27 18:11:46"
+            "time": "2017-06-30T22:25:28+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": [],
+    "minimum-stability": "alpha",
+    "stability-flags": {
+        "smmccabe/accompanist": 15
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -14,7 +14,20 @@ class Thunder extends Base {
     $this->addRequireDev('burdamagazinorg/thunder-dev-tools', 'dev-master');
     $this->addRequireDev('behat/mink-selenium2-driver', 'dev-master');
 
-    //todo: add replace functionality to accompanist: https://getcomposer.org/doc/04-schema.md#replace
+    // Replace
+    $this->setReplace(
+      [
+        "heiseonline/shariff" => "*",
+        "bower-asset/jquery" => "*",
+        "bower-asset/jqueryui" => "*",
+        "bower-asset/backbone" => "*",
+        "bower-asset/underscore" => "*",
+        "npm-asset/jquery" => "*",
+        "npm-asset/jqueryui" => "*",
+        "npm-asset/backbone" => "*",
+        "npm-asset/underscore" => "*",
+      ]
+    );
 
     // Require
     $this->addRequire('drupal-composer/drupal-scaffold', '^2.0.0');

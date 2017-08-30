@@ -33,7 +33,7 @@ services:
     restart: unless-stopped
     command: -c /dev/null --web --docker --logLevel=INFO
     ports:
-      - '80:80'
+      - '8989:80'
       - '8888:8080'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
