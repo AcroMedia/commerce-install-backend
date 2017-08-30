@@ -5,10 +5,7 @@ namespace Kickstart;
 class Lightning extends Base {
 
   public function __construct() {
-    parent::__construct('Kickstart', 'Automatically Generated Commerce Kickstart Composer File');
-
-    // Type
-    $this->setType('project');
+    parent::__construct();
 
     // Require Dev
     $this->addRequireDev('drupal/drupal-extension', '~3.2.0');

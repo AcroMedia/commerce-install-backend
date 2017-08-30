@@ -5,10 +5,7 @@ namespace Kickstart;
 class Thunder extends Base {
 
   public function __construct() {
-    parent::__construct('Kickstart', 'Automatically Generated Commerce Kickstart Composer File');
-
-    // Type
-    $this->setType('project');
+    parent::__construct();
 
     // Require Dev
     $this->addRequireDev('burdamagazinorg/thunder-dev-tools', 'dev-master');
