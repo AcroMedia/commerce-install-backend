@@ -144,6 +144,5 @@ class Thunder extends Base {
         ],
       ],
     ]);
-
   }
 }
