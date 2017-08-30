@@ -39,6 +39,10 @@ class Lightning extends Base {
       'post-install-cmd',
       'DrupalComposer\\DrupalScaffold\\Plugin::scaffold'
     );
+    $this->addScript(
+      'post-update-cmd',
+      'DrupalComposer\\DrupalScaffold\\Plugin::scaffold'
+    );
 
     // Config
     $this->setConfig(['bin-dir' => 'bin/']);
