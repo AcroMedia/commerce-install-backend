@@ -11,14 +11,14 @@ header("Access-Control-Allow-Origin: *");
 
 if (isset($_GET['base'])) {
     switch ($_GET['base']) {
-        case 'lightning':
-            $composerJSON = new Lightning();
-            break;
-        case 'thunder':
-            $composerJSON = new Thunder();
-            break;
-        default:
-            $composerJSON = new Drupal();
+    case 'lightning':
+        $composerJSON = new Lightning();
+        break;
+    case 'thunder':
+        $composerJSON = new Thunder();
+        break;
+    default:
+        $composerJSON = new Drupal();
     }
 } else {
     $composerJSON = new Drupal();

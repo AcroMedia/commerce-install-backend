@@ -2,9 +2,11 @@
 
 namespace Kickstart;
 
-class Drupal extends Base {
+class Drupal extends Base
+{
 
-  public function __construct() {
-    parent::__construct();
-  }
+    public function __construct() 
+    {
+        parent::__construct();
+    }
 }
