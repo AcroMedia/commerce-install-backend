@@ -93,7 +93,8 @@ class Thunder extends Base {
     $this->addRequire('bower-asset/shariff', '^1.24');
 
     // Extras
-    $this->setExtra([
+    $this->setExtra(
+      (object) [
       'installer-paths' => [
         'web/core' => [
           'type:drupal-core',

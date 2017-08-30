@@ -44,7 +44,8 @@ class Lightning extends Base {
     $this->setConfig(['bin-dir' => 'bin/']);
 
     // Extras
-    $this->setExtra([
+    $this->setExtra(
+      (object) [
       'installer-types' => ['bower-asset', 'npm-asset'],
       'installer-paths' => [
         'web/core' => [

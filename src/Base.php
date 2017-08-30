@@ -84,7 +84,8 @@ class Base extends Accompanist {
       'DrupalProject\\composer\\ScriptHandler::createRequiredFiles'
     );
     // Extra
-    $this->setExtra([
+    $this->setExtra(
+      (object) [
         'installer-paths' => [
           'web/core' => [
             'type:drupal-core',
