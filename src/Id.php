@@ -5,7 +5,7 @@ namespace Kickstart;
 class Id
 {
 
-    public static function getID() 
+    public static function getID()
     {
         $filename = 'generated/id';
         if (file_exists($filename)) {
@@ -15,8 +15,7 @@ class Id
             file_put_contents($filename, $id);
 
             return $id;
-        }
-        else {
+        } else {
             file_put_contents($filename, '1');
             return 1;
         }

@@ -5,7 +5,7 @@ namespace Kickstart;
 class Lightning extends Base
 {
 
-    public function __construct() 
+    public function __construct()
     {
         parent::__construct();
 
