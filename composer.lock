@@ -1,0 +1,56 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8493fa54fcd70a8f706d2c7902e5c3f7",
+    "packages": [
+        {
+            "name": "smmccabe/accompanist",
+            "version": "1.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/smmccabe/accompanist.git",
+                "reference": "5ec3ad4bf072401f470d7b2f749b669fb246015e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/smmccabe/accompanist/zipball/5ec3ad4bf072401f470d7b2f749b669fb246015e",
+                "reference": "5ec3ad4bf072401f470d7b2f749b669fb246015e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Accompanist\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU"
+            ],
+            "authors": [
+                {
+                    "name": "Shawn McCabe",
+                    "email": "smccabe@acromediainc.com"
+                }
+            ],
+            "description": "A PHP API for generating dynamic composer.json files",
+            "time": "2017-09-01T22:59:54+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "alpha",
+    "stability-flags": {
+        "smmccabe/accompanist": 15
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

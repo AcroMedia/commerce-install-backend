@@ -50,33 +50,29 @@ class Lightning extends Base
         $this->setConfig(['bin-dir' => 'bin/']);
 
         // Extras
-        $this->setExtra(
-            (object) [
-            'installer-types' => ['bower-asset', 'npm-asset'],
-            'installer-paths' => [
-            'web/core' => [
-            'type:drupal-core',
-            ],
-            'web/libraries/{$name}' => [
-            'type:drupal-library',
-            'type:bower-asset',
-            'type:npm-asset',
-            ],
-            'web/modules/contrib/{$name}' => [
-            'type:drupal-module',
-            ],
-            'web/profiles/contrib/{$name}' => [
-            'type:drupal-profile',
-            ],
-            'web/themes/contrib/{$name}' => [
-            'type:drupal-theme',
-            ],
-            'drush/contrib/{$name}' => [
-            'type:drupal-drush',
-            ],
-            ],
-            'enable-patching' => true,
-            ]
-        );
+        $this->addExtra('installer-types', ['bower-asset', 'npm-asset']);
+        $this->addExtra('enable-patching', true);
+        $this->addExtra('installer-paths', [
+        'web/core' => [
+        'type:drupal-core',
+        ],
+        'web/libraries/{$name}' => [
+        'type:drupal-library',
+        'type:bower-asset',
+        'type:npm-asset',
+        ],
+        'web/modules/contrib/{$name}' => [
+        'type:drupal-module',
+        ],
+        'web/profiles/contrib/{$name}' => [
+        'type:drupal-profile',
+        ],
+        'web/themes/contrib/{$name}' => [
+        'type:drupal-theme',
+        ],
+        'drush/contrib/{$name}' => [
+        'type:drupal-drush',
+        ],
+        ]);
     }
 }

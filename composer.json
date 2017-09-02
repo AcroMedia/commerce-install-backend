@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "smmccabe/accompanist": ">=1.0.0-alpha2"
+        "smmccabe/accompanist": ">=1.0.0-alpha4"
     },
     "minimum-stability": "alpha",
     "autoload": {

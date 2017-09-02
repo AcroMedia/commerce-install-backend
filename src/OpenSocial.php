@@ -62,18 +62,14 @@ class OpenSocial extends Base
         $this->setConfig(['bin-dir' => 'bin/']);
 
         // Extras
-        $this->setExtra(
-            (object) [
-            'patches' => [
-            'drupal/core' => [
-            'Clean up user input for exposed checkboxes' => 'https://www.drupal.org/files/issues/2687773-18-Cleanup-user-input-for-checkboxes-8.2.patch',
-            'Color module html preview optional' => 'https://www.drupal.org/files/issues/color-optional-html-preview-2844190-2.patch',
-            ],
-            'drupal/like_and_dislike' => [
-            'Fix preview on node' => 'https://www.drupal.org/files/issues/2848080-2-preview-fails-on-node.patch',
-            ],
-            ],
-            ]
-        );
+        $this->addExtra('patches', [
+        'drupal/core' => [
+          'Clean up user input for exposed checkboxes' => 'https://www.drupal.org/files/issues/2687773-18-Cleanup-user-input-for-checkboxes-8.2.patch',
+          'Color module html preview optional' => 'https://www.drupal.org/files/issues/color-optional-html-preview-2844190-2.patch',
+        ],
+        'drupal/like_and_dislike' => [
+          'Fix preview on node' => 'https://www.drupal.org/files/issues/2848080-2-preview-fails-on-node.patch',
+        ],
+        ]);
     }
 }
