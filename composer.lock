@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8493fa54fcd70a8f706d2c7902e5c3f7",
+    "content-hash": "4977415fc051c070c653d19ff2c6648d",
     "packages": [
         {
             "name": "smmccabe/accompanist",
-            "version": "1.0.0-alpha4",
+            "version": "1.0.0-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smmccabe/accompanist.git",
