@@ -95,9 +95,9 @@ class Thunder extends Base
         $this->addRequire('bower-asset/shariff', '^1.24');
 
         // Extras
-        $this->setExtra(
-            (object) [
-            'installer-paths' => [
+        $this->addExtra(
+            'installer-paths',
+            [
             'web/core' => [
             'type:drupal-core',
             ],
@@ -113,8 +113,11 @@ class Thunder extends Base
             'drush/contrib/{$name}' => [
             'type:drupal-drush',
             ],
-            ],
-            'patches' => [
+            ]
+        );
+        $this->addExtra(
+            'patches',
+            [
             "drupal/media_entity" => [
             "Make the label form element non-required in the entity form" => "https://www.drupal.org/files/issues/2813685-21.patch",
             ],
@@ -141,7 +144,6 @@ class Thunder extends Base
             ],
             "drupal/media_entity_pinterest" => [
             "Media name always 'h'" => "https://www.drupal.org/files/issues/media_name_always_h-2837977-8.patch",
-            ],
             ],
             ]
         );

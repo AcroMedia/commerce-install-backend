@@ -11,7 +11,7 @@ class Base extends Accompanist
     {
         parent::__construct('Kickstart', 'Automatically Generated Commerce Kickstart Composer File');
 
-        // Repositories
+      // Repositories
         $this->addRepository('drupal', 'composer', 'https://packages.drupal.org/8');
         $this->addRepository(
             'commerce_base',
@@ -85,10 +85,10 @@ class Base extends Accompanist
             'post-update-cmd',
             'DrupalProject\\composer\\ScriptHandler::createRequiredFiles'
         );
-        // Extra
-        $this->setExtra(
-            (object) [
-            'installer-paths' => [
+      // Extra
+        $this->addExtra(
+            'installer-paths',
+            [
             'web/core' => [
             'type:drupal-core',
             ],
@@ -106,7 +106,6 @@ class Base extends Accompanist
             ],
             'web/contrib/{$name}' => [
             'type:drupal-drush',
-            ],
             ],
             ]
         );

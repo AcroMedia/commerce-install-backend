@@ -6,6 +6,7 @@ use Kickstart\Id;
 use Kickstart\Drupal;
 use Kickstart\Lightning;
 use Kickstart\Thunder;
+use Kickstart\OpenSocial;
 use Kickstart\Analytics;
 
 $analytics = new Analytics();
@@ -21,6 +22,9 @@ if (isset($_GET['base'])) {
             break;
         case 'thunder':
             $composerJSON = new Thunder();
+            break;
+        case 'open-social':
+            $composerJSON = new OpenSocial();
             break;
         default:
             $composerJSON = new Drupal();
