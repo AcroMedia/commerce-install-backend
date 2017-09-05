@@ -6,11 +6,16 @@ use Kickstart\Id;
 use Kickstart\Drupal;
 use Kickstart\Lightning;
 use Kickstart\Thunder;
+use Kickstart\Analytics;
+
+$analytics = new Analytics();
+$id = Id::getID();
 
 header("Access-Control-Allow-Origin: *");
 
 if (isset($_GET['base'])) {
-    switch ($_GET['base']) {
+    $base = $_GET['base'];
+    switch ($base) {
         case 'lightning':
             $composerJSON = new Lightning();
             break;
@@ -20,8 +25,10 @@ if (isset($_GET['base'])) {
         default:
             $composerJSON = new Drupal();
     }
+    $analytics->saveData($id, 'base', $base);
 } else {
     $composerJSON = new Drupal();
+    $analytics->saveData($id, 'base', 'drupal');
 }
 
 
@@ -32,6 +39,7 @@ if (isset($_GET['packages'])) {
     if (is_array($packages)) {
         foreach ($packages as $package) {
             $composerJSON->addRequire($package);
+            $analytics->saveData($id, 'module', $package);
         }
     }
 }
@@ -39,7 +47,6 @@ if (isset($_GET['packages'])) {
 // Package Generation, move into function/class at some point
 @mkdir('generated');
 
-$id = Id::getID();
 $folder = 'generated/kickstart-' . $id;
 
 $filename = $folder . '.tar';

@@ -13,6 +13,7 @@ services:
       - ./vendor:/var/www/vendor
       - ./src:/var/www/src
       - ./templates:/var/www/templates
+      - ./analytics:/var/www/analytics
 
   nginx:
     image: wodby/drupal-nginx:8-1.10-2.0.0
