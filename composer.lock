@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "smmccabe/accompanist",
-            "version": "1.0.0-alpha5",
+            "version": "1.0.0-alpha6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smmccabe/accompanist.git",
-                "reference": "5ec3ad4bf072401f470d7b2f749b669fb246015e"
+                "reference": "20b347b1918f79cc3aacac2ddb708c974261b1fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smmccabe/accompanist/zipball/5ec3ad4bf072401f470d7b2f749b669fb246015e",
-                "reference": "5ec3ad4bf072401f470d7b2f749b669fb246015e",
+                "url": "https://api.github.com/repos/smmccabe/accompanist/zipball/20b347b1918f79cc3aacac2ddb708c974261b1fd",
+                "reference": "20b347b1918f79cc3aacac2ddb708c974261b1fd",
                 "shasum": ""
             },
             "require": {
@@ -40,7 +40,7 @@
                 }
             ],
             "description": "A PHP API for generating dynamic composer.json files",
-            "time": "2017-09-01T22:59:54+00:00"
+            "time": "2017-09-02T04:36:04+00:00"
         }
     ],
     "packages-dev": [],
