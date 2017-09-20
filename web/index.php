@@ -29,19 +29,19 @@ if (isset($_GET['base'])) {
         default:
             $composerJSON = new Drupal();
     }
-    $analytics->saveData($id, $_GET['email'],'base', $base);
+    $analytics->saveData($id, $_GET['email'], 'base', $base);
 } else {
     $composerJSON = new Drupal();
-    $analytics->saveData($id, $_GET['email'],'base', 'drupal');
+    $analytics->saveData($id, $_GET['email'], 'base', 'drupal');
 }
 
-if($_GET['newsletter'] == 'on') {
+if ($_GET['newsletter'] == 'on') {
 // Hubspot Signup.
-  $hubspot = SevenShores\Hubspot\Factory::create(
-    '3839d48c-f9ea-40fa-8ab9-a71011a36de7'
-  );
+    $hubspot = SevenShores\Hubspot\Factory::create(
+        '3839d48c-f9ea-40fa-8ab9-a71011a36de7'
+    );
 
-  $response = $hubspot->contactLists()->addContact(529, [], [$_GET['email']]);
+    $response = $hubspot->contactLists()->addContact(529, [], [$_GET['email']]);
 }
 
 // Custom packages
