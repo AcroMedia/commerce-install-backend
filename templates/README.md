@@ -1,3 +1,3 @@
-# Commerce Install 
+# Commerce Kickstart 2.x Installer 
 
-add info here.
+Generated on [commercekickstart.com](https://commercekickstart.com).

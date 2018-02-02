@@ -10,6 +10,7 @@ class OpenSocial extends Base
         parent::__construct();
 
         // Require
+        // https://github.com/goalgorilla/drupal_social/blob/master/composer.json
         $this->addRequire('cweagans/composer-patches', '^1.5.0');
         $this->addRequire('composer/installers', '^1.0');
         $this->addRequire('drupal-composer/drupal-scaffold', '^2.0.0');
