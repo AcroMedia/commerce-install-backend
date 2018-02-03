@@ -50,7 +50,7 @@ if (isset($_GET['packages'])) {
 
     if (is_array($packages)) {
         foreach ($packages as $package) {
-            $composerJSON->addRequire($package);
+            $composerJSON->addRequire($package[0], $package[1]);
             $analytics->saveData($id, $_GET['email'], 'module', $package);
         }
     }
