@@ -8,6 +8,7 @@ use Kickstart\Lightning;
 use Kickstart\Thunder;
 use Kickstart\OpenSocial;
 use Kickstart\Analytics;
+use Kickstart\PackageGenerator;
 
 $analytics = new Analytics();
 $id = Id::getID();
@@ -56,31 +57,7 @@ if (isset($_GET['packages'])) {
     }
 }
 
-// Package Generation, move into function/class at some point
-@mkdir('generated');
-
-$folder = 'generated/kickstart-' . $id;
-
-$filename = $folder . '.tar';
-
-try {
-    $tar = new PharData($filename);
-
-    $tar->addFromString('composer.json', $composerJSON->generateJSON());
-    $tar->addEmptyDir('scripts');
-    $tar->addEmptyDir('scripts/composer');
-    $tar->addFile('../templates/README.md', 'README.md');
-    $tar->addFile(
-        '../templates/ScriptHandler.php',
-        'scripts/composer/ScriptHandler.php'
-    );
-
-    $tar->compress(Phar::GZ);
-
-    unlink($filename);
-} catch (Exception $e) {
-    echo "Exception : " . $e;
-}
+$filename = PackageGenerator::generatePackage($id, $composerJSON);
 
 // Dev env will be using http
 $protocol = strpos($_SERVER['HTTP_HOST'], 'localhost') === false ? 'https://' : 'http://';
