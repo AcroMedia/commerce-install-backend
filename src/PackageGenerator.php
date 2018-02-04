@@ -6,36 +6,38 @@ use Exception;
 use Phar;
 use PharData;
 
-class PackageGenerator {
+class PackageGenerator
+{
 
-  public static function generatePackage($id, $composerJSON) {
+    public static function generatePackage($id, $composerJSON)
+    {
 
-    // Package Generation, move into function/class at some point
-    @mkdir('generated');
+        // Package Generation, move into function/class at some point
+        @mkdir('generated');
 
-    $folder = 'generated/kickstart-' . $id;
+        $folder = 'generated/kickstart-' . $id;
 
-    $filename = $folder . '.tar';
+        $filename = $folder . '.tar';
 
-    try {
-      $tar = new PharData($filename);
+        try {
+            $tar = new PharData($filename);
 
-      $tar->addFromString('composer.json', $composerJSON->generateJSON());
-      $tar->addEmptyDir('scripts');
-      $tar->addEmptyDir('scripts/composer');
-      $tar->addFile('../templates/README.md', 'README.md');
-      $tar->addFile(
-        '../templates/ScriptHandler.php',
-        'scripts/composer/ScriptHandler.php'
-      );
+            $tar->addFromString('composer.json', $composerJSON->generateJSON());
+            $tar->addEmptyDir('scripts');
+            $tar->addEmptyDir('scripts/composer');
+            $tar->addFile('../templates/README.md', 'README.md');
+            $tar->addFile(
+              '../templates/ScriptHandler.php',
+              'scripts/composer/ScriptHandler.php'
+            );
 
-      $tar->compress(Phar::GZ);
+            $tar->compress(Phar::GZ);
 
-      unlink($filename);
-    } catch (Exception $e) {
-      echo "Exception : " . $e;
+            unlink($filename);
+        } catch (Exception $e) {
+            echo "Exception : " . $e;
+        }
+
+        return $filename;
     }
-
-    return $filename;
-  }
 }
