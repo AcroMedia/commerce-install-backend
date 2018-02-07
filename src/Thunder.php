@@ -93,6 +93,7 @@ class Thunder extends Base
         $this->addRequire('bower-asset/blazy', '^1.6.0');
         $this->addRequire('bower-asset/slick-carousel', '^1.6');
         $this->addRequire('bower-asset/shariff', '^1.24');
+        $this->addRequire('drush/drush', "^9.0.0");
 
         // Extras
         $this->addExtra(

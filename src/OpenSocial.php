@@ -45,6 +45,7 @@ class OpenSocial extends Base
         $this->addRequire('drupal/csv_serialization', '1.0');
         $this->addRequire('league/csv', '^7.1');
         $this->addRequire('drupal/social_api', '1.1');
+        $this->addRequire('drush/drush', "^9.0.0");
 
         // Repositories
         $this->addRepository(
