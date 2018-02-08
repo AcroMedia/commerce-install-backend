@@ -38,9 +38,9 @@ class Lightning extends Base
             'https://asset-packagist.org'
         );
         $this->addRepository(
-          'dev',
-          'vcs',
-          'https://github.com/acquia/lightning-dev'
+            'dev',
+            'vcs',
+            'https://github.com/acquia/lightning-dev'
         );
 
         // Scripts
