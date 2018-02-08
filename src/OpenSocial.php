@@ -14,7 +14,7 @@ class OpenSocial extends Base
         $this->addRequire('cweagans/composer-patches', '^1.5.0');
         $this->addRequire('composer/installers', '^1.0');
         $this->addRequire('drupal-composer/drupal-scaffold', '^2.0.0');
-        $this->addRequire('drupal/core', '8.3.7');
+        $this->addRequire('drupal/core', '^8.4.0');
         $this->addRequire('drupal/crop', '1.2');
         $this->addRequire('drupal/address', '1.1');
         $this->addRequire('drupal/addtoany', '1.8');
