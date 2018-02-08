@@ -9,7 +9,7 @@ class Base extends Accompanist
 
     public function __construct()
     {
-        parent::__construct('Kickstart', 'Automatically Generated Commerce Kickstart Composer File');
+        parent::__construct('Commerce Kickstart', 'Generated on commercekickstart.com');
 
       // Repositories
         $this->addRepository('drupal', 'composer', 'https://packages.drupal.org/8');
@@ -39,11 +39,12 @@ class Base extends Accompanist
         $this->addRequire('drupal-composer/drupal-scaffold', '^2.2');
         $this->addRequire('drupal/admin_toolbar', '~1.0');
         $this->addRequire('drupal/console', '~1.0');
-        $this->addRequire('drupal/core', '~8.3.0');
+        $this->addRequire('drupal/core', '~8.4.0');
         $this->addRequire('drupal/commerce', '~2.0');
         $this->addRequire('drupal/search_api', '~1.0');
         $this->addRequire('drupal/swiftmailer', '~1.0');
         $this->addRequire('drupalcommerce/commerce_base', "dev-8.x-1.x");
+        $this->addRequire('drush/drush', "^9.0.0");
         $this->addRequire('webflo/drupal-finder', '^0.3.0');
         $this->addRequire('webmozart/path-util', '^2.3');
 

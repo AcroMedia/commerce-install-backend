@@ -21,13 +21,15 @@ class Lightning extends Base
         $this->addRequireDev('behat/behat', '^3.0');
         $this->addRequireDev('se/selenium-server-standalone', '^2.53');
         $this->addRequireDev('composer/composer', '^1.3');
-        $this->addRequireDev('drush/drush', '8.1.11');
+        $this->addRequireDev('drush/drush', '^9.0.0');
         $this->addRequireDev('drupal/console', '^1.0');
+        $this->addRequireDev('drupal/media_entity_generic', '^1.0');
+        $this->addRequireDev('acquia/lightning_dev', 'dev-8.x-1.x');
 
         // Require
         $this->addRequire('drupal-composer/drupal-scaffold', '^2.0.0');
         $this->addRequire('cweagans/composer-patches', '^1.6.0');
-        $this->addRequire('acquia/lightning', '~2.1.6');
+        $this->addRequire('acquia/lightning', '~3.0.0');
 
         // Repositories
         $this->addRepository(

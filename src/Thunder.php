@@ -45,7 +45,7 @@ class Thunder extends Base
         $this->addRequire('drupal/blazy', '^1.0');
         $this->addRequire('drupal/breakpoint_js_settings', '^1.0');
         $this->addRequire('drupal/checklistapi', '^1.0');
-        $this->addRequire('drupal/core', '^8.3.0');
+        $this->addRequire('drupal/core', '^8.4.0');
         $this->addRequire('drupal/config_update', '^1.0');
         $this->addRequire('drupal/content_lock', '^1.0');
         $this->addRequire('drupal/crop', '^1.0');
@@ -93,6 +93,7 @@ class Thunder extends Base
         $this->addRequire('bower-asset/blazy', '^1.6.0');
         $this->addRequire('bower-asset/slick-carousel', '^1.6');
         $this->addRequire('bower-asset/shariff', '^1.24');
+        $this->addRequire('drush/drush', "^9.0.0");
 
         // Extras
         $this->addExtra(

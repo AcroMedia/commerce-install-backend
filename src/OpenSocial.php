@@ -10,6 +10,7 @@ class OpenSocial extends Base
         parent::__construct();
 
         // Require
+        // https://github.com/goalgorilla/drupal_social/blob/master/composer.json
         $this->addRequire('cweagans/composer-patches', '^1.5.0');
         $this->addRequire('composer/installers', '^1.0');
         $this->addRequire('drupal-composer/drupal-scaffold', '^2.0.0');
@@ -44,6 +45,7 @@ class OpenSocial extends Base
         $this->addRequire('drupal/csv_serialization', '1.0');
         $this->addRequire('league/csv', '^7.1');
         $this->addRequire('drupal/social_api', '1.1');
+        $this->addRequire('drush/drush', "^9.0.0");
 
         // Repositories
         $this->addRepository(
