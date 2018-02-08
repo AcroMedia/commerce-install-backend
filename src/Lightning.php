@@ -10,7 +10,7 @@ class Lightning extends Base
         parent::__construct();
 
         // Require Dev
-        $this->addRequireDev('drupal/drupal-extension', '~3.2.0');
+        $this->addRequireDev('drupal/drupal-extension', '~3.3.0');
         $this->addRequireDev('behat/mink', '~1.7');
         $this->addRequireDev('behat/mink-goutte-driver', '~1.2');
         $this->addRequireDev('jcalderonzumba/gastonjs', '~1.0.2');
@@ -33,9 +33,14 @@ class Lightning extends Base
 
         // Repositories
         $this->addRepository(
-            'acquia_lightning',
-            'vcs',
-            'https://github.com/acquia/lightning-project'
+            'assets',
+            'composer',
+            'https://asset-packagist.org'
+        );
+        $this->addRepository(
+          'dev',
+          'vcs',
+          'https://github.com/acquia/lightning-dev'
         );
 
         // Scripts
