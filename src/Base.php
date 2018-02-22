@@ -30,7 +30,7 @@ class Base extends Accompanist
         $this->setConfig(['bin-dir' => 'bin', 'sort-packages' => true]);
 
         // License
-        $this->setLicense('GPL-2.0+');
+        $this->setLicense('GPL-2.0-or-later');
 
         // Require
         $this->addRequire('ext-curl');
