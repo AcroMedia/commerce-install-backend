@@ -45,7 +45,7 @@ class Base extends Accompanist
         $this->addRequire('drupal/swiftmailer', '~1.0');
         $this->addRequire('drupalcommerce/commerce_base', "dev-8.x-1.x");
         $this->addRequire('drush/drush', "^9.0.0");
-        $this->addRequire('webflo/drupal-finder', '^0.3.0');
+        $this->addRequire('webflo/drupal-finder', '^1.0.0');
         $this->addRequire('webmozart/path-util', '^2.3');
 
         // Require Dev
