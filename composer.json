@@ -9,20 +9,13 @@
     ],
     "require": {
         "cweagans/composer-patches": "~1.0",
-        "smmccabe/accompanist": ">=1.0.0-alpha4",
+        "smmccabe/accompanist": ">=1.0.0-beta1",
         "ryanwinchester/hubspot-php" : "^1.1.0"
     },
     "minimum-stability": "alpha",
     "autoload": {
         "psr-4": {
             "Kickstart\\": "src/"
-        }
-    },
-    "extra": {
-        "patches": {
-            "ryanwinchester/hubspot-php": {
-                "Adds contact list add by email support": "https://patch-diff.githubusercontent.com/raw/ryanwinchester/hubspot-php/pull/118.patch"
-            }
         }
     }
 }
