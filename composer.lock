@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4a08777d7e6ede038f0cefc60a76027",
+    "content-hash": "66ca63f23414dae14c172f5f1f0af420",
     "packages": [
         {
             "name": "cweagans/composer-patches",
-            "version": "1.6.2",
+            "version": "1.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cweagans/composer-patches.git",
-                "reference": "014e968ca2ce4342476b3f2f6779b274fff8ae9e"
+                "reference": "462e65061606dc6149349535d4322241515d1b16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/014e968ca2ce4342476b3f2f6779b274fff8ae9e",
-                "reference": "014e968ca2ce4342476b3f2f6779b274fff8ae9e",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/462e65061606dc6149349535d4322241515d1b16",
+                "reference": "462e65061606dc6149349535d4322241515d1b16",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
                 }
             ],
             "description": "Provides a way to patch Composer packages.",
-            "time": "2017-08-30T16:41:23+00:00"
+            "time": "2017-12-07T16:16:31+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -283,16 +283,16 @@
         },
         {
             "name": "ryanwinchester/hubspot-php",
-            "version": "v1.1.0",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ryanwinchester/hubspot-php.git",
-                "reference": "17668af4cb02c95fe9f5306a0477dfe63de59096"
+                "reference": "6b1eefe59a0db5824b2d8e6d391ad317f2c793b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ryanwinchester/hubspot-php/zipball/17668af4cb02c95fe9f5306a0477dfe63de59096",
-                "reference": "17668af4cb02c95fe9f5306a0477dfe63de59096",
+                "url": "https://api.github.com/repos/ryanwinchester/hubspot-php/zipball/6b1eefe59a0db5824b2d8e6d391ad317f2c793b8",
+                "reference": "6b1eefe59a0db5824b2d8e6d391ad317f2c793b8",
                 "shasum": ""
             },
             "require": {
@@ -306,9 +306,7 @@
             },
             "type": "library",
             "extra": {
-                "patches_applied": {
-                    "Adds contact list add by email support": "https://patch-diff.githubusercontent.com/raw/ryanwinchester/hubspot-php/pull/118.patch"
-                }
+                "patches_applied": []
             },
             "autoload": {
                 "psr-4": {
@@ -334,24 +332,27 @@
                 "api",
                 "hubspot"
             ],
-            "time": "2017-08-08T20:30:55+00:00"
+            "time": "2018-01-17T20:33:43+00:00"
         },
         {
             "name": "smmccabe/accompanist",
-            "version": "1.0.0-alpha6",
+            "version": "1.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smmccabe/accompanist.git",
-                "reference": "20b347b1918f79cc3aacac2ddb708c974261b1fd"
+                "reference": "f8e8d19e3448c8b715808a1f9642d5d8fcd8dec3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smmccabe/accompanist/zipball/20b347b1918f79cc3aacac2ddb708c974261b1fd",
-                "reference": "20b347b1918f79cc3aacac2ddb708c974261b1fd",
+                "url": "https://api.github.com/repos/smmccabe/accompanist/zipball/f8e8d19e3448c8b715808a1f9642d5d8fcd8dec3",
+                "reference": "f8e8d19e3448c8b715808a1f9642d5d8fcd8dec3",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.4 || ^7.0"
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=6.0"
             },
             "type": "library",
             "autoload": {
@@ -361,7 +362,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GNU"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
@@ -370,15 +371,13 @@
                 }
             ],
             "description": "A PHP API for generating dynamic composer.json files",
-            "time": "2017-09-02T04:36:04+00:00"
+            "time": "2018-03-16T20:56:07+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "alpha",
-    "stability-flags": {
-        "smmccabe/accompanist": 15
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
