@@ -7,6 +7,7 @@ use Kickstart\Drupal;
 use Kickstart\Lightning;
 use Kickstart\Thunder;
 use Kickstart\OpenSocial;
+use Kickstart\OpenEDU;
 use Kickstart\Analytics;
 use Kickstart\PackageGenerator;
 
@@ -26,6 +27,9 @@ if (isset($_GET['base'])) {
             break;
         case 'open-social':
             $composerJSON = new OpenSocial();
+            break;
+        case 'openedu':
+            $composerJSON = new OpenEDU();
             break;
         default:
             $composerJSON = new Drupal();
@@ -59,7 +63,4 @@ if (isset($_GET['packages'])) {
 
 $filename = PackageGenerator::generatePackage($id, $composerJSON);
 
-// Dev env will be using http
-$protocol = strpos($_SERVER['HTTP_HOST'], 'localhost') === false ? 'https://' : 'http://';
-// The compress option above automatically generates the .gz version
-print $protocol . $_SERVER['HTTP_HOST'] . '/' . $filename . '.gz';
+echo '//' . $_SERVER['HTTP_HOST'] . '/' . $filename . '.gz';

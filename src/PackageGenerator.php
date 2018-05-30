@@ -26,6 +26,7 @@ class PackageGenerator
             $tar->addEmptyDir('scripts');
             $tar->addEmptyDir('scripts/composer');
             $tar->addFile('../templates/README.md', 'README.md');
+            $tar->addFile('../templates/gitignore.txt', '.gitignore');
             $tar->addFile(
                 '../templates/ScriptHandler.php',
                 'scripts/composer/ScriptHandler.php'

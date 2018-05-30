@@ -1,0 +1,6 @@
+name: kickstart-backend
+recipe: lemp
+config:
+  webroot: web
+  xdebug: true
+  php: '7.1'
